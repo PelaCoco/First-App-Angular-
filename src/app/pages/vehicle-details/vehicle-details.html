@@ -1,0 +1,19 @@
+<div class="details-container" *ngIf="vehicle">
+  <h2>{{ vehicle.make }} {{ vehicle.model }}</h2>
+  <div class="vehicle-layout">
+    <div class="vehicle-image-section">
+      <img [src]="vehicle.imageUrl" alt="Image of {{vehicle.make}} {{vehicle.model}}">
+    </div>
+    <div class="vehicle-specs-section">
+      <p><strong>Year:</strong> {{ vehicle.year }}</p>
+      <p><strong>Price:</strong> {{ vehicle.price | currency:"USD" }}</p>
+      <p><strong>Description:</strong></p>
+      <p>{{ vehicle.description }}</p>
+      <a routerLink="/vehicles" class="back-button">Back to List</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="!vehicle">
+  <p>Vehicle details are not available.</p>
+  <a routerLink="/vehicles" class="back-button">Back to List</a>
+</div>

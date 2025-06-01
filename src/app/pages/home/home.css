@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
